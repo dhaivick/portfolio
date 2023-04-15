@@ -1,10 +1,23 @@
+html { background-color: #F6F6F6; }
+
 body {
-    margin: 0px 15% 0px 15%;
+    margin: 0px 12% 0px 12%;
     font-family: 'Trebuchet MS', sans-serif;
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    height: 100vh;
 }
   
 @media only screen and (max-width: 728px) {
     body {
         margin: 0px 5% 0px 5%;
+    }
+}
+
+@media only screen and (max-width: 328px) {
+    body {
+        margin: 0px 1% 0px 1%;
     }
 }
