@@ -1,10 +1,12 @@
-import Header from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (
     <>
-      <Header />
-      <h1>Home</h1>
+      <Navbar />
+      <h1 style={{ textAlign: "center" }}>Home</h1>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,10 @@
+body {
+    margin: 0px 15% 0px 15%;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+  
+@media only screen and (max-width: 728px) {
+    body {
+        margin: 0px 5% 0px 5%;
+    }
+}
