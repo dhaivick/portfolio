@@ -11,7 +11,7 @@ import {
   Paper,
   Transition,
   rem,
-  Avatar,
+  Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -147,9 +147,14 @@ export default function Navbar() {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <Avatar color="blue" radius="xl">
-          DJ
-        </Avatar>
+        <Text
+          fz="md"
+          fw={700}
+          variant="gradient"
+          gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+        >
+          Dhaivick Jasumal
+        </Text>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
