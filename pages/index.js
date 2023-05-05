@@ -1,15 +1,15 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import { Grid, Text, Card, Button } from "@mantine/core";
+import { Grid, Text } from "@mantine/core";
 
 function Home() {
   return (
     <>
       <Navbar />
       <Grid>
-        <Grid.Col md={1} lg={2} />
-        <Grid.Col md={10} lg={8}>
-          <Text style={{ textAlign: "justify", textJustify: "inter-word" }}>
+        <Grid.Col xs={1} sm={1} md={1} lg={2} />
+        <Grid.Col xs={8} lg={8}>
+          <Text style={{ textAlign: "justify" }}>
             Welcome to my personal website! I'm a software developer with a
             passion for creating high-quality software solutions that solve
             complex problems.
@@ -40,7 +40,7 @@ function Home() {
             or have any questions, please don't hesitate to get in touch!
           </Text>
         </Grid.Col>
-        <Grid.Col md={1} lg={2} />
+        <Grid.Col xs={1} sm={1} md={1} lg={2} />
       </Grid>
       <Footer />
     </>
