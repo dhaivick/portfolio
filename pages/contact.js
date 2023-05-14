@@ -59,7 +59,7 @@ export default function Contact() {
           <ExtLink href="https://elula.tech">Elula Tech Pvt Ltd</ExtLink>
         </div>
 
-        <div className={contactStyles.links}>
+        <div class={contactStyles.links}>
           {contacts.map(({ Comp, link, alt }) => {
             return (
               <ExtLink key={link} href={link} aria-label={alt}>
