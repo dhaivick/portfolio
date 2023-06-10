@@ -1,14 +1,10 @@
-import Header from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
-function Projects() {
+export default function Projects() {
   return (
-    <>
-      <Header />
-      <h1 style={{ textAlign: "center" }}>Projects</h1>
-      <Footer />
-    </>
+    <div>
+      <Navbar />
+      <h1>Projects!</h1>
+    </div>
   );
 }
-
-export default Projects;

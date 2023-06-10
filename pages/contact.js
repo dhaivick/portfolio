@@ -1,7 +1,5 @@
-import Header from "../components/Navbar/Navbar";
-
-import sharedStyles from "../styles/shared.module.css";
-import contactStyles from "../styles/contact.module.css";
+import Navbar from "../components/Navbar/Navbar";
+import { Grid } from "semantic-ui-react";
 
 const GitHub = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" {...props}>
@@ -18,6 +16,35 @@ const LinkedIn = (props) => (
 const Envelope = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
     <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+  </svg>
+);
+
+const Avatar = (props) => (
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <g
+      transform="translate(0.000000,137.000000) scale(0.100000,-0.100000)"
+      fill="#000000"
+      stroke="none"
+    >
+      <path
+        d="M172 1028 c-18 -84 -35 -163 -38 -175 -6 -23 -5 -23 98 -23 l105 0
+19 93 19 92 254 3 c267 2 285 0 276 -42 -2 -11 -23 -106 -45 -210 -22 -104
+-45 -195 -51 -202 -9 -11 -43 -14 -140 -14 -71 0 -129 2 -129 5 0 3 20 91 45
+195 25 104 45 192 45 195 0 3 -44 5 -99 5 l-98 0 -52 -262 c-29 -145 -55 -273
+-58 -286 l-6 -23 279 3 c255 3 282 5 319 23 59 29 77 77 135 360 61 294 65
+331 48 365 -25 46 -55 49 -489 49 l-405 1 -32 -152z"
+      />
+      <path
+        d="M1196 1081 c-9 -39 -16 -72 -16 -75 0 -4 40 -6 90 -6 85 0 90 1 95
+23 14 63 25 113 25 120 0 4 -40 7 -89 7 l-89 0 -16 -69z"
+      />
+      <path
+        d="M1165 918 c-3 -13 -28 -127 -55 -255 -58 -271 -72 -306 -138 -336
+-41 -18 -72 -21 -239 -25 l-191 -5 -17 -61 c-9 -33 -19 -69 -21 -78 -5 -17 13
+-18 278 -18 293 1 335 6 378 45 35 32 50 83 115 396 36 173 67 324 70 337 5
+22 4 22 -85 22 -85 0 -90 -1 -95 -22z"
+      />
+    </g>
   </svg>
 );
 
@@ -46,29 +73,38 @@ const contacts = [
 export default function Contact() {
   return (
     <>
-      <Header titlePre="Contact" />
-      <div className={sharedStyles.layout}>
-        <div className={contactStyles.avatar}>
-          <img src="/avatar.png" alt="avatar with letters DJ" height={60} />
-        </div>
+      <Navbar />
 
-        <h1 style={{ marginTop: 0 }}>Contact</h1>
+      <Grid container textAlign="center" verticalAlign="middle">
+        <Grid.Row>
+          <Grid.Column width={16}>
+            <Avatar width={150} />
+          </Grid.Column>
 
-        <div className={contactStyles.name}>
-          Dhaivick Jasumal - Senior Software Development Engineer @{" "}
-          <ExtLink href="https://elula.tech">Elula Tech Pvt Ltd</ExtLink>
-        </div>
+          <Grid.Column width={16}>
+            Dhaivick Jasumal - Senior Software Development Engineer &nbsp;
+            <ExtLink href="https://elula.tech">@Elula Tech Pvt Ltd</ExtLink>
+          </Grid.Column>
 
-        <div class={contactStyles.links}>
-          {contacts.map(({ Comp, link, alt }) => {
-            return (
-              <ExtLink key={link} href={link} aria-label={alt}>
-                <Comp height={32} />
-              </ExtLink>
-            );
-          })}
-        </div>
-      </div>
+          <Grid.Column width={16} style={{ margin: "10px" }}>
+            <h1>Contact</h1>
+          </Grid.Column>
+          <Grid.Column width={16}>
+            {contacts.map(({ Comp, link, alt }) => {
+              return (
+                <ExtLink
+                  key={link}
+                  href={link}
+                  aria-label={alt}
+                  style={{ margin: "10px 10px" }}
+                >
+                  <Comp height={32} />
+                </ExtLink>
+              );
+            })}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </>
   );
 }

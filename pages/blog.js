@@ -1,14 +1,10 @@
-import Header from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
-function Blog() {
+export default function Blog() {
   return (
-    <>
-      <Header />
-      <h1 style={{ textAlign: "center" }}>Blog</h1>
-      <Footer />
-    </>
+    <div>
+      <Navbar />
+      <h1>Blog!</h1>
+    </div>
   );
 }
-
-export default Blog;
