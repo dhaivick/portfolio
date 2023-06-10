@@ -25,7 +25,7 @@ export default function Navbar() {
   ];
 
   return (
-    <Menu inverted color="gray" style={{ borderRadius: 0 }}>
+    <Menu inverted color="gray" style={{ borderRadius: 0, width: "100vw" }}>
       <Menu.Item>
         <span style={{ fontFamily: "cursive" }}>Dhaivick</span>
       </Menu.Item>
