@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar/Navbar";
-import { Grid, Feed, Label, Icon } from "semantic-ui-react";
+import { Grid, Feed, Label, Icon, Header } from "semantic-ui-react";
 
 export default function Blog() {
   const date = "3 days ago";
@@ -13,7 +13,9 @@ export default function Blog() {
       <Grid container textAlign="center" verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={16} style={{ margin: "10px" }}>
-            <h1>Blogs</h1>
+            <Header as="h1" style={{ textDecoration: "underline" }}>
+              Blog
+            </Header>
           </Grid.Column>
 
           <Grid.Column width={16} style={{ marginTop: "30px" }}>
