@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import { Grid } from "semantic-ui-react";
+import Head from "next/head";
 
 const GitHub = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" {...props}>
@@ -73,6 +74,10 @@ const contacts = [
 export default function Index() {
   return (
     <div>
+      <Head>
+        <title>Home</title>
+      </Head>
+
       <Navbar />
 
       <Grid container textAlign="center" verticalAlign="middle">
